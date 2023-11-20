@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import LoginScreen from "./components/LoginScreen";
+import AdminDashboard from "./components/AdminDashboard";
+import "./App.css";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
+  const [userId, setUserId] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!loggedIn ? (
+        <LoginScreen
+          onLoginSuccess={(token, id) => {
+            setLoggedIn(true);
+            setToken(token);
+            setUserId(id);
+          }}
+        />
+      ) : (
+        <AdminDashboard token={token} userId={userId} />
+      )}
     </div>
   );
 }

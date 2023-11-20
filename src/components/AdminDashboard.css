@@ -1,0 +1,93 @@
+.admin-dashboard {
+  font-family: "Poppins", sans-serif;
+  background-color: #030303;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.admin-dashboard h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.admin-dashboard label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.admin-dashboard input[type="radio"] {
+  accent-color: #6741d9;
+}
+
+.admin-dashboard input[type="text"],
+.admin-dashboard input[type="number"] {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.admin-dashboard input[type="text"]:disabled,
+.admin-dashboard input[type="number"]:disabled {
+  background-color: #c2c2c2;
+  color: #6f6f6f;
+}
+
+.admin-dashboard .radio-group {
+  margin-bottom: 20px;
+}
+
+.admin-dashboard .amount-group {
+  margin-bottom: 20px;
+}
+
+.admin-dashboard button {
+  background-color: #6741d9;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  /* width: 600px;  */
+}
+
+.admin-dashboard button:hover {
+  border: 1px solid #f0c3f1;
+}
+
+.admin-dashboard button:disabled {
+  background-color: #c2c2c2;
+  color: #6f6f6f;
+  cursor: default;
+}
+
+.amount-group {
+  margin-left: 70px;
+}
+
+.customSong {
+  gap: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.regularSong {
+  display: flex;
+  gap: 120px;
+  margin-top: 20px;
+}
+
+.amount {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/* You might need to add additional rules or adjust these to get the exact look you want. */
